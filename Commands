@@ -1,0 +1,2 @@
+API TO FETCH ALL DATA FROM PARTICULAR INDEX=====================   GET student/_search
+API TO FETCH ALL INDEXES                   =====================   GET _cat/indices
