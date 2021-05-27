@@ -1,2 +1,7 @@
 API TO FETCH ALL DATA FROM PARTICULAR INDEX=====================   GET student/_search
 API TO FETCH ALL INDEXES                   =====================   GET _cat/indices
+API TO DELETE    INDEXES                   =====================   DELETE index_name
+API TO COUNT DOCS INDEXES                  =====================   GET student/_count
+API TO SEE THE DEFAULT SETTINGS            =====================   GET student/_settings
+API TO SEE THE MAPPINGS                    =====================   GET student/_mapping
+
