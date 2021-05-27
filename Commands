@@ -20,3 +20,131 @@ API TO SEE PARTICULAR COLUMN               =====================   GET ipl/_sear
                             }
                           }
 match query will check for each word while match phrase will check for the whole phrase as once.
+
+API FOR AGGREGATE FOR COUNTING THE PLAYER OF MATCH =============== GET ipl/_search
+{
+  "_source":["city","player_of_match","date"],
+  "size":0,
+  "aggs":{
+    "player":{
+      "terms": {
+        "field": "player_of_match.keyword",
+        "size": 100,
+        "order": {
+          "_count": "desc"
+        }
+      }
+    }
+  }
+}
+
+
+
+API FOR MULTIPLE FIELDS AGGREGATION=====
+GET ipl/_search
+{
+  "_source":["city","player_of_match","date"],
+  "size":0,
+  "aggs":{
+    "player":{
+      "terms": {
+        "field": "player_of_match.keyword",
+        "size": 100,
+        "order": {
+          "_count": "desc"
+        }
+      }
+      
+    },
+    "city":{
+      "terms": {
+        "field": "city.keyword",
+        "size": 100,
+        "order": {
+          "_count": "desc"
+        }
+      }
+    
+  }
+}}
+
+
+API WITH QUERY AND AGGREGATE=========================== GET ipl/_search
+{
+  "_source":["city","player_of_match","date"],
+  "size":0,
+  "query": {"match": {
+    "team1": "Royal Challengers Bangalore"
+  }},
+  
+  
+  "aggs":{
+    "player":{
+      "terms": {
+        "field": "player_of_match.keyword",
+        "size": 100,
+        "order": {
+          "_count": "desc"
+        }
+      }
+      
+    },
+    "city":{
+      "terms": {
+        "field": "city.keyword",
+        "size": 100,
+        "order": {
+          "_count": "desc"
+        }
+      }
+    
+  }
+}}
+
+FOR OR CONDITION WE USE SHOULD IN QUERY AND FOR AND CONDITION WE USE MUST 
+
+GET ipl/_search
+{
+  "_source":["city","player_of_match","date"],
+  "size":0,
+  "query": {"bool": {"should": [
+    {"match": {
+      "team1": "Royal Challengers Bangalore"
+    }},{"match": {
+      "team2": "Royal Challengers Bangalore"
+    }}
+  ]}},
+  
+  "aggs":{
+    "player":{
+      "terms": {
+        "field": "player_of_match.keyword",
+        "size": 100,
+        "order": {
+          "_count": "desc"
+        }
+      }
+      
+    },
+    "city":{
+      "terms": {
+        "field": "city.keyword",
+        "size": 100,
+        "order": {
+          "_count": "desc"
+        }
+      }
+    
+  }
+}}
+
+
+
+SIMPLE QUERY FOR OR AND OPERATIONS======================== GET ipl/_search
+{
+"query": {"query_string": {
+  "default_field": "player_of_match",
+  "query": "(R Dravid) OR (R McLaren)"
+}}
+  
+}
