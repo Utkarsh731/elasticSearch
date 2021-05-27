@@ -4,4 +4,19 @@ API TO DELETE    INDEXES                   =====================   DELETE index_
 API TO COUNT DOCS INDEXES                  =====================   GET student/_count
 API TO SEE THE DEFAULT SETTINGS            =====================   GET student/_settings
 API TO SEE THE MAPPINGS                    =====================   GET student/_mapping
-
+API TO SEE PARTICULAR COLUMN               =====================   GET ipl/_search
+                                                                      {
+                                                                      "_source":["city"] or "_source":["city","id",....],
+                                                                      "size":20
+                                                                    }
+ API FOR MATCH PHRASE ============= GET ipl/_search
+                          {
+                            "_source":["city","player_of_match","date"],
+                            "size":20,
+                            "query":{
+                              "match_phrase": {
+                                "player_of_match": "Yuvraj"
+                              }
+                            }
+                          }
+match query will check for each word while match phrase will check for the whole phrase as once.
