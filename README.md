@@ -4,6 +4,8 @@ In this repository we have added the elasticsearch theory and practical with cod
 
 Service.py file has all the common functions that are used in ElasticSearch-
 1. Create Index
+2. Delete Index
+3. Update Index
 
 
 [Official Documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-analyze.html)
