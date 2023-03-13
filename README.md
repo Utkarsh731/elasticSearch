@@ -8,6 +8,8 @@ Service.py file has all the common functions that are used in ElasticSearch-
 3. Update Index
 4. Check Index
 5. Get All Index
+6. Insert Single Record
+7. Get Single Record
 
 
 [Official Documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-analyze.html)
