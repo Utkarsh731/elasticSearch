@@ -1,6 +1,6 @@
 # elasticSearch
 
-In this repository we have added the elasticsearch theory with code in python.
+In this repository we have added the elasticsearch theory and practical with code in python.
 
 
 [Official Documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-analyze.html)
