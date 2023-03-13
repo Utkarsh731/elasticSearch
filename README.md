@@ -2,6 +2,8 @@
 
 In this repository we have added the elasticsearch theory and practical with code in python.
 
+Service.py file has all the common functions that are used in ElasticSearch
+
 
 [Official Documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-analyze.html)
 
