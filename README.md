@@ -6,6 +6,8 @@ Service.py file has all the common functions that are used in ElasticSearch-
 1. Create Index
 2. Delete Index
 3. Update Index
+4. Check Index
+5. Get All Index
 
 
 [Official Documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-analyze.html)
