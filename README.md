@@ -1,6 +1,6 @@
 # elasticSearch Theory and Practical Using Python
 
-In this repository we have added the elasticsearch theory and practical with code in python.
+In this repository we have added the elasticsearch theory and practical with code in python. You can go through the services.py file that is the main source code.
 
 Service.py file has all the common functions that are used in ElasticSearch-
 1. Create Index
